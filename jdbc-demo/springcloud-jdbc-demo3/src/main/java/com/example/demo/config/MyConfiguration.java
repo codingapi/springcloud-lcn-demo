@@ -1,6 +1,6 @@
 package com.example.demo.config;
 
-import com.lorne.tx.springcloud.feign.TransactionRestTemplateInterceptor;
+import com.codingapi.tx.springcloud.feign.TransactionRestTemplateInterceptor;
 import feign.RequestInterceptor;
 import org.springframework.context.annotation.Bean;
 

@@ -4,7 +4,7 @@ import com.example.demo.client.Demo2Client;
 import com.example.demo.dao.TestMapper;
 import com.example.demo.entity.Test;
 import com.example.demo.service.DemoService;
-import com.lorne.tx.annotation.TxTransaction;
+import com.codingapi.tx.annotation.TxTransaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -42,7 +42,7 @@ public class DemoServiceImpl implements DemoService {
 
         int rs1 = testMapper.save("mybatis-hello-1");
 
-       // int v = 100/0;
+        int v = 100/0;
 
         return rs1+rs2;
     }

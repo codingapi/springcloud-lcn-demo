@@ -5,7 +5,7 @@ import com.example.demo.client.Demo3Client;
 import com.example.demo.dao.TestDao;
 import com.example.demo.entity.Test;
 import com.example.demo.service.DemoService;
-import com.lorne.tx.annotation.TxTransaction;
+import com.codingapi.tx.annotation.TxTransaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -44,7 +44,7 @@ public class DemoServiceImpl implements DemoService {
 
         int rs1 = testDao.save();
 
-       //int v = 100/0;
+        int v = 100/0;
 
         return rs1+rs2+rs3;
     }
