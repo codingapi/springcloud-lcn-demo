@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.codingapi</groupId>
+    <artifactId>springcloud-lcn-demo</artifactId>
+    <version>4.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>springcloud-lcn-demo</name>
+
+    <modules>
+        <module>jpa-demo/springcloud-jpa-demo1</module>
+        <module>jpa-demo/springcloud-jpa-demo2</module>
+        <module>jpa-demo/springcloud-jpa-demo3</module>
+
+        <module>jdbc-demo/springcloud-jdbc-demo1</module>
+        <module>jdbc-demo/springcloud-jdbc-demo2</module>
+        <module>jdbc-demo/springcloud-jdbc-demo3</module>
+        <module>jdbc-demo/springcloud-jdbc-demo4</module>
+        <module>jdbc-demo/springcloud-jdbc-demo5</module>
+
+        <module>mybatis-demo/springcloud-mybatis-demo1</module>
+        <module>mybatis-demo/springcloud-mybatis-demo2</module>
+
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+</project>
