@@ -23,9 +23,9 @@ mybatis版本的demo中使用了hytrix，有两个模块，调用关系图如下
 
 ![](readme/mybatis_demo.png)
 
-## 依赖的环境
+## 依赖的服务
 
-springcloud-lcn-demo 需要依赖的环境有：
+springcloud-lcn-demo 需要依赖的服务有：
 
 1. TxManager 
 2. Mysql 
@@ -35,6 +35,8 @@ springcloud-lcn-demo 需要依赖的环境有：
 TxManager的启动与配置见：   
 
 [TxManager启动说明](https://github.com/codingapi/tx-lcn/wiki/TxManager%E5%90%AF%E5%8A%A8%E8%AF%B4%E6%98%8E)
+
+* TxManager启动说明中包含Eureka的配置环境
 
 
 ## 数据库配置与设置
@@ -254,9 +256,11 @@ public class MyConfiguration {
 
 [http://127.0.0.1:8081/demo/save](http://127.0.0.1:8081/demo/save)  
 
-请求以后会出现 / by zero异常。这是由于在demo1的最后一句代码上写有`   int v = 100/0;`
+请求以后会出现 / by zero异常。这是由于在demo1的最后一句代码上写有`int v = 100/0;`
 
-此时观察数据你会发现没有任何数据，当把这句代码注释掉以后再执行时，将会看到两条数据。
+![](readme/demo.png)
+
+当把这句代码注释掉以后再执行时，此时观察数据你会发现没有任何数据在数据库下将会看到有两条数据。
 
 
 
