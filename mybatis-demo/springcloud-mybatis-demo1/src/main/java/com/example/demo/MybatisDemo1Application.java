@@ -29,7 +29,7 @@ public class MybatisDemo1Application {
 
 
 	@Bean
-	public DataSource dataSource() {
+	public LCNTransactionDataSource dataSource() {
 		DruidDataSource dataSource = new DruidDataSource();
 		dataSource.setUrl(env.getProperty("spring.datasource.url"));
 		dataSource.setUsername(env.getProperty("spring.datasource.username"));//用户名

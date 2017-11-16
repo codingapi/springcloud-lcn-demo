@@ -26,9 +26,6 @@ public class TxTransactionInterceptor  implements Ordered {
 
     @Around("execution(* com.example.demo.service.impl.*Impl.*(..))")
     public Object around(ProceedingJoinPoint point)throws Throwable{
-        System.out.println("interceptor-->around-->start");
-        Object val =  txManagerInterceptor.around(point);
-        System.out.println("interceptor-->around-->end");
-        return val;
+        return txManagerInterceptor.around(point);
     }
 }
