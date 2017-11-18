@@ -11,8 +11,6 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 
-import javax.sql.DataSource;
-
 @EnableAutoConfiguration
 @SpringBootApplication
 @EnableEurekaClient
@@ -25,7 +23,6 @@ public class MybatisDemo1Application {
 
 	@Autowired
 	private Environment env;
-
 
 
 	@Bean

@@ -18,7 +18,7 @@ jpa版本的demo中有是哪个模块，其中demo3是没有数据库事务的�
 ![](readme/jpa_demo.png)
 
 
-mybatis版本的demo中使用了hytrix，有两个模块，调用关系图如下：
+mybatis版本的demo中使用了hytrix，有两个模块，并且demo1，自定义了TxManager的通讯方式和tx.properties地址的获取方式。调用关系图如下：
 
 
 ![](readme/mybatis_demo.png)
