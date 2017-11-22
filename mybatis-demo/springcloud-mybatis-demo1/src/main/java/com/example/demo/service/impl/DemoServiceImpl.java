@@ -35,14 +35,12 @@ public class DemoServiceImpl implements DemoService {
     @Transactional
     public int save() {
 
-        System.out.println("service-thread-id:"+Thread.currentThread());
 
         int rs2 = demo2Client.save();
 
-
         int rs1 = testMapper.save("mybatis-hello-1");
 
-       // int v = 100/0;
+        int v = 100/0;
 
         return rs1+rs2;
     }
