@@ -24,6 +24,10 @@
         <module>mybatis-demo/springcloud-mybatis-demo1</module>
         <module>mybatis-demo/springcloud-mybatis-demo2</module>
 
+
+        <module>sharding-jdbc-demo/springcloud-shardingjdbc-mybatis-demo1</module>
+        <module>sharding-jdbc-demo/springcloud-shardingjdbc-mybatis-demo2</module>
+
     </modules>
 
     <properties>
