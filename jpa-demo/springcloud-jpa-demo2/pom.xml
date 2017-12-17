@@ -14,9 +14,9 @@
 
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.4.RELEASE</version>
+		<groupId>com.codingapi</groupId>
+		<artifactId>springcloud-lcn-demo</artifactId>
+		<version>4.0.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -31,8 +31,8 @@
 
 		<dependency>
 			<groupId>com.codingapi</groupId>
-			<artifactId>transaction-springcloud</artifactId>
-			<version>4.0.1</version>
+			<artifactId>tx-plugins-nodb</artifactId>
+			<version>${lcn.last.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.slf4j</groupId>
@@ -41,46 +41,6 @@
 			</exclusions>
 		</dependency>
 
-		<dependency>
-			<groupId>com.codingapi</groupId>
-			<artifactId>tx-plugins-db</artifactId>
-			<version>4.0.1</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>*</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
-			<version>1.0.19</version>
-		</dependency>
-
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
 
 
 	</dependencies>

@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by lorne on 2017/6/27.
  */
-@FeignClient(value = "demo3",configuration = MyConfiguration.class)
+@FeignClient(value = "demo3",configuration = MyConfiguration.class,fallback = Demo3ClientHystric.class)
 public interface Demo3Client {
 
 

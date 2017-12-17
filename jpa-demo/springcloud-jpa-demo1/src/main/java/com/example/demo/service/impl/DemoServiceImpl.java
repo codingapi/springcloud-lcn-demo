@@ -2,7 +2,7 @@ package com.example.demo.service.impl;
 
 import com.codingapi.tx.annotation.TxTransaction;
 import com.codingapi.tx.aop.bean.TxTransactionLocal;
-import com.example.demo.client.Demo3Client;
+import com.example.demo.client.Demo2Client;
 import com.example.demo.dao.TestRepository;
 import com.example.demo.entity.Test;
 import com.example.demo.service.DemoService;
@@ -20,7 +20,7 @@ public class DemoServiceImpl implements DemoService {
 
 
     @Autowired
-    private Demo3Client demo3Client;
+    private Demo2Client demo2Client;
 
 
     @Autowired
@@ -36,14 +36,14 @@ public class DemoServiceImpl implements DemoService {
     @Transactional
     public int save() {
 
-        int rs2 = demo3Client.save();
+        int rs2 = demo2Client.save();
 
         Test test = new Test();
+        test.setName("jpa-hello-1");
 
-        test.setName("jpa-hello-1-"+TxTransactionLocal.current().getGroupId());
         int rs1 = testRepository.save(test).getId();
 
-       // int v = 100/0;
+        int v = 100/0;
 
         return rs1+rs2;
     }
