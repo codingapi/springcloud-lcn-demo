@@ -15,7 +15,7 @@
 	<parent>
 		<groupId>com.codingapi</groupId>
 		<artifactId>springcloud-lcn-demo</artifactId>
-		<version>4.0.3.M1</version>
+		<version>0.0.3.M2</version>
 	</parent>
 
 

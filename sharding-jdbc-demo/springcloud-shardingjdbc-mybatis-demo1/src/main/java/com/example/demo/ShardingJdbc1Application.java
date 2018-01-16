@@ -30,17 +30,10 @@ public class ShardingJdbc1Application {
 
 
 
+
+
+
 	@Bean
-	public LCNTransactionDataSource dataSource() {
-
-		LCNTransactionDataSource dataSourceProxy = new LCNTransactionDataSource();
-		dataSourceProxy.setDataSource(shardingDataSource());
-		dataSourceProxy.setMaxCount(10);
-		return dataSourceProxy;
-	}
-
-
-
 	public DataSource shardingDataSource() {
 
 		Map<String, DataSource> dataSourceMap = new HashMap<>();

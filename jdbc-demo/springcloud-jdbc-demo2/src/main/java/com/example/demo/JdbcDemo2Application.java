@@ -25,7 +25,7 @@ public class JdbcDemo2Application {
 	private Environment env;
 
 	@Bean
-	public LCNTransactionDataSource dataSource() {
+	public DruidDataSource dataSource() {
 		DruidDataSource dataSource = new DruidDataSource();
 		dataSource.setUrl(env.getProperty("spring.datasource.url"));
 		dataSource.setUsername(env.getProperty("spring.datasource.username"));//用户名
@@ -39,10 +39,7 @@ public class JdbcDemo2Application {
 		dataSource.setTestWhileIdle(true);
 		dataSource.setPoolPreparedStatements(false);
 
-		LCNTransactionDataSource dataSourceProxy = new LCNTransactionDataSource();
-		dataSourceProxy.setDataSource(dataSource);
-		dataSourceProxy.setMaxCount(10);
-		return dataSourceProxy;
+		return dataSource;
 	}
 
 }
