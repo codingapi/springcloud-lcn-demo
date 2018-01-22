@@ -1,6 +1,6 @@
 package com.example.demo.service.impl;
 
-import com.example.demo.client.Demo2Client;
+import com.codingapi.tx.annotation.TxTransaction;
 import com.example.demo.dao.TestMapper;
 import com.example.demo.entity.Test;
 import com.example.demo.service.DemoService;
@@ -27,17 +27,12 @@ public class DemoServiceImpl implements DemoService {
     }
 
 
-
-    @Autowired
-    private Demo2Client demo2Client;
-
     @Override
     @Transactional
+    @TxTransaction
     public int save() {
 
         int rs = testMapper.save("mybatis-hello-2");
-
-//        int v = 100/0;
 
         return rs;
     }

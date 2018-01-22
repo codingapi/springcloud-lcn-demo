@@ -1,5 +1,6 @@
 package com.example.demo.service.impl;
 
+import com.codingapi.tx.annotation.TxTransaction;
 import com.example.demo.client.Demo3Client;
 import com.example.demo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ public class DemoServiceImpl implements DemoService {
 
 
     @Override
+    @TxTransaction
     public int save() {
 
         demo3Client.save();

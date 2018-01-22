@@ -31,7 +31,7 @@ public class DemoServiceImpl implements DemoService {
     }
 
     @Override
-    @TxTransaction
+    @TxTransaction(isStart = true)
     @Transactional
     public int save() {
 

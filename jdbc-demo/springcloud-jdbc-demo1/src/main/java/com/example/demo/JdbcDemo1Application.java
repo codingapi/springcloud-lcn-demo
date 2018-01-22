@@ -1,7 +1,6 @@
 package com.example.demo;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.codingapi.tx.datasource.relational.LCNTransactionDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -12,7 +11,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 
 import javax.sql.DataSource;
-import javax.xml.crypto.Data;
 
 @EnableAutoConfiguration
 @SpringBootApplication
@@ -41,7 +39,6 @@ public class JdbcDemo1Application {
 		dataSource.setTestOnBorrow(false);
 		dataSource.setTestWhileIdle(true);
 		dataSource.setPoolPreparedStatements(false);
-
 		return dataSource;
 	}
 
