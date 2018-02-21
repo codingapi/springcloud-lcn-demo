@@ -5,7 +5,7 @@
 
     <groupId>com.codingapi</groupId>
     <artifactId>springcloud-lcn-demo</artifactId>
-    <version>4.0.3</version>
+    <version>4.1.0</version>
     <packaging>pom</packaging>
 
     <name>springcloud-lcn-demo</name>
@@ -47,7 +47,7 @@
         <maven.compile.target>1.7</maven.compile.target>
         <spring-cloud.version>Dalston.SR1</spring-cloud.version>
 
-        <lcn.last.version>4.0.3</lcn.last.version>
+        <lcn.last.version>4.1.0</lcn.last.version>
 
     </properties>
 
