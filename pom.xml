@@ -43,7 +43,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring-cloud.version>Dalston.SR1</spring-cloud.version>
-        <lcn.last.version>4.0.3.SNAPSHOT</lcn.last.version>
+        <lcn.last.version>4.0.1</lcn.last.version>
     </properties>
 
     <dependencies>
