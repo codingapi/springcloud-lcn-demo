@@ -1,5 +1,6 @@
 package com.example.demo.service.impl;
 
+import com.codingapi.tx.annotation.TxTransaction;
 import com.example.demo.dao.TestRepository;
 import com.example.demo.entity.Test;
 import com.example.demo.service.DemoService;
@@ -13,7 +14,6 @@ import java.util.List;
  * Created by lorne on 2017/6/26.
  */
 @Service
-@Transactional
 public class DemoServiceImpl implements DemoService {
 
     @Autowired
@@ -25,6 +25,8 @@ public class DemoServiceImpl implements DemoService {
     }
 
     @Override
+    @TxTransaction
+    @Transactional
     public int save() {
 
         Test test = new Test();

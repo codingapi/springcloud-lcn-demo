@@ -1,7 +1,6 @@
 package com.example.demo.service.impl;
 
 import com.codingapi.tx.annotation.TxTransaction;
-import com.codingapi.tx.aop.bean.TxTransactionLocal;
 import com.example.demo.client.Demo2Client;
 import com.example.demo.dao.TestRepository;
 import com.example.demo.entity.Test;
@@ -32,7 +31,7 @@ public class DemoServiceImpl implements DemoService {
     }
 
     @Override
-    @TxTransaction
+    @TxTransaction(isStart = true)
     @Transactional
     public int save() {
 

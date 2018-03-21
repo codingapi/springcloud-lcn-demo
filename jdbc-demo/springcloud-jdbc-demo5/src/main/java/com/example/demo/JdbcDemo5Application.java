@@ -1,7 +1,6 @@
 package com.example.demo;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.codingapi.tx.datasource.relational.LCNTransactionDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -10,6 +9,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
+
+import javax.sql.DataSource;
 
 @EnableAutoConfiguration
 @SpringBootApplication
@@ -25,7 +26,7 @@ public class JdbcDemo5Application {
 	private Environment env;
 
 	@Bean
-	public LCNTransactionDataSource dataSource() {
+	public DataSource dataSource() {
 		DruidDataSource dataSource = new DruidDataSource();
 		dataSource.setUrl(env.getProperty("spring.datasource.url"));
 		dataSource.setUsername(env.getProperty("spring.datasource.username"));//用户名
@@ -39,10 +40,7 @@ public class JdbcDemo5Application {
 		dataSource.setTestWhileIdle(true);
 		dataSource.setPoolPreparedStatements(false);
 
-		LCNTransactionDataSource dataSourceProxy = new LCNTransactionDataSource();
-		dataSourceProxy.setDataSource(dataSource);
-		dataSourceProxy.setMaxCount(10);
-		return dataSourceProxy;
+		return dataSource;
 	}
 
 

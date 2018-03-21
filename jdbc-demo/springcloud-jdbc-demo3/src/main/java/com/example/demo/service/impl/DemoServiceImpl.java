@@ -1,5 +1,6 @@
 package com.example.demo.service.impl;
 
+import com.codingapi.tx.annotation.TxTransaction;
 import com.example.demo.client.Demo4Client;
 import com.example.demo.client.Demo5Client;
 import com.example.demo.dao.TestDao;
@@ -33,6 +34,7 @@ public class DemoServiceImpl implements DemoService {
 
     @Override
     @Transactional
+    @TxTransaction
     public int save() {
 
         int rs4 = demo4Client.save();

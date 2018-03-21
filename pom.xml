@@ -5,7 +5,7 @@
 
     <groupId>com.codingapi</groupId>
     <artifactId>springcloud-lcn-demo</artifactId>
-    <version>4.0.0</version>
+    <version>4.1.0</version>
     <packaging>pom</packaging>
 
     <name>springcloud-lcn-demo</name>
@@ -41,9 +41,14 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
+
+        <java.version>1.7</java.version>
+        <maven.compile.source>1.7</maven.compile.source>
+        <maven.compile.target>1.7</maven.compile.target>
         <spring-cloud.version>Dalston.SR1</spring-cloud.version>
-        <lcn.last.version>4.0.3.SNAPSHOT</lcn.last.version>
+
+        <lcn.last.version>4.1.0</lcn.last.version>
+
     </properties>
 
     <dependencies>
@@ -105,6 +110,17 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${maven.compile.source}</source>
+                    <target>${maven.compile.target}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

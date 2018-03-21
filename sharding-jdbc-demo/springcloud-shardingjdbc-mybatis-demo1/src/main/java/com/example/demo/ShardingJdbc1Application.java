@@ -1,7 +1,6 @@
 package com.example.demo;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.codingapi.tx.datasource.relational.LCNTransactionDataSource;
 import io.shardingjdbc.core.api.ShardingDataSourceFactory;
 import io.shardingjdbc.core.api.config.ShardingRuleConfiguration;
 import io.shardingjdbc.core.api.config.TableRuleConfiguration;
@@ -30,20 +29,13 @@ public class ShardingJdbc1Application {
 
 
 
+
+
+
 	@Bean
-	public LCNTransactionDataSource dataSource() {
-
-		LCNTransactionDataSource dataSourceProxy = new LCNTransactionDataSource();
-		dataSourceProxy.setDataSource(shardingDataSource());
-		dataSourceProxy.setMaxCount(10);
-		return dataSourceProxy;
-	}
-
-
-
 	public DataSource shardingDataSource() {
 
-		Map<String, DataSource> dataSourceMap = new HashMap<>();
+		Map<String, DataSource> dataSourceMap = new HashMap<String, DataSource>();
 
 		DruidDataSource dataSource1 = new DruidDataSource();
 		dataSource1.setDriverClassName("com.mysql.jdbc.Driver");
